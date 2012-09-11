@@ -4,58 +4,53 @@
   <title>Smile</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style>
-#outline{
-  width: 210px;
-  height:210px;
-  border-radius: 210px;
-  background:black;
-  margin:0 auto;
-}
+
 #face{
   background:yellow;
-  position: absolute;
+  position: relative;
   margin: 5px 0 0 5px;
   width: 200px;
   height:200px;
   border-radius: 200px; 
-}
-#inter, #smile{
-  width: 150px;
-  height:150px;
-
-  border-radius: 150px;
-  background:black;
+  border: 5px solid #000;
   margin: 0 auto;
-  margin-top: 20px;
-  
 }
 #smile{
+  width: 150px;
+  height:150px;
+  border-radius: 150px;
   position:absolute;
   background:yellow;
-  margin: -10px 0 0 0 ;
-
+  top:10px;
+  left:25px;
+  z-index: 10;
+  box-shadow: 0px 10px 0px black;
 }
-#left-eye, #right-eye{
-  width: 40px;
-  height:40px;
-  border-radius: 40px;
-  background:black;
-  float:left;
-  margin: 40px 17px;
+
+#eyes:before,#eyes:after {
+   width: 40px;
+   height:40px;
+   border-radius: 40px;
+   background:black;
+   content: "";
+   position: absolute;
+   top: 50px;
+   z-index: 20;
+}
+#eyes:before{
+  left: 115px; 
+}
+
+#eyes:after{
+  left: 45px; 
 }
 
 </style>
 </head>
 <body>
-<div id="outline">
   <div id="face">
-    <div id="inter">
-      <div id="smile">
-        <div id="left-eye"></div><div id="right-eye"></div>
-      </div>
-    </div>  
-    </div>
+    <div id="eyes"></div>
+    <div id="smile"></div>
   </div>
-</div>
 </body>
 </html>
